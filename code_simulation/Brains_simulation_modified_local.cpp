@@ -1,4 +1,4 @@
-// Modifying both the growth rate alfagt[i] (1x) and the thickness H[i] (0.25x) at a localized region in the brain growth simulation
+// Modifying both the growth rate alfagt[i] (2x) and the thickness H[i] (0.25x) at a localized region in the brain growth simulation
 #include <omp.h>
 #include "vema.h"
 #include "eig3.h"
@@ -237,7 +237,7 @@ int main(int argc, char* argv[]) {
 			H[i] = 0.1 - 0.05*t; 
 			if (qp.y <-0.6 && rqp < 1){  
 				H[i] = 0.5*H[i]; // modifying thickness locally
-				alfagt[i] = 1*1.9; // modifying growth rate locally
+				alfagt[i] = 2*1.9; // modifying growth rate locally
 			}
 		}
 
